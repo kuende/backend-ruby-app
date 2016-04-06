@@ -4,6 +4,8 @@ ruby '2.3.0'
 
 gem 'activesupport', '~> 4.2.6', :require => 'active_support'
 
+gem 'rake', '~> 11.1.2'
+
 # database
 gem 'database_url', '~> 0.1.1'
 gem 'sequel', '~> 4.33.0'
@@ -15,7 +17,7 @@ gem 'redis-namespace', '~> 1.5.2'
 gem 'connection_pool', '~> 2.2.0'
 
 # rabbitmq
-gem 'hutch', '~> 0.15.0'
+gem 'hutch', '~> 0.21.0'
 
 # manage Procfile
 gem 'foreman', '~> 0.78.0'
