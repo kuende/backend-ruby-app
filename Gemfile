@@ -9,8 +9,13 @@ gem 'database_url', '~> 0.1.1'
 gem 'sequel', '~> 4.33.0'
 gem 'pg', '~> 0.18.4'
 
+# Sidekiq
 gem 'redis', '~> 3.2.2'
+gem 'redis-namespace', '~> 1.5.2'
 gem 'connection_pool', '~> 2.2.0'
+
+# rabbitmq
+gem 'hutch', '~> 0.15.0'
 
 # manage Procfile
 gem 'foreman', '~> 0.78.0'
