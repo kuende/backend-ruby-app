@@ -1,8 +1,8 @@
 class NotificationConsumer
   include Hutch::Consumer
-  consume 'ng.notification.new'
+  consume 'bs.notification.new'
 
   def process(payload)
-    puts payload
+    puts payload[:profile_ref_id]
   end
 end
