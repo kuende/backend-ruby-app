@@ -54,7 +54,7 @@ You are required to implemented the functionality listed below. All features nee
 
 Currently there is an API implemented which lists all notifications for an user. Please add this functionality:
 
-- Implement pagination. Currently all notifications are returned for every request. Some users can have thousands of notifications.
+- Currently all notifications are returned for every request. Some users can have thousands of notifications. Implement pagination. 
 - Get all notifications since a date sent as parameter `since`
 - Return all unread notifications (parameter `unseen=true`)
 
@@ -63,9 +63,9 @@ Currently there is an API implemented which lists all notifications for an user.
 Other services need a way to send notifications to users. Implement the NotificationConsumer with the following functionality:
 
 - Save the provided payload as a new notification in the database
-- Send a notification to user's mobile phone calling the provided GCMService. Since fault tolerancy is a must, call it from a Sidekiq background job.
+- Send a notification to user's mobile phone calling the provided `GCMService`. Since fault tolerancy is a must, call it from a Sidekiq background job.
 
-Note: You can use the scripts/publish-notification.rb to insert notification payloads into Rabbitmq.
+Note: You can use the `scripts/publish-notification.rb` to insert notification payloads into Rabbitmq.
 
 ### Advanced API usage
 
