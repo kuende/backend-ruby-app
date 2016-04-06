@@ -7,6 +7,12 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 Bundler.require(:default)
 
+# Don't load .env in azk, since developers can have .env for outside azk
+unless ENV['AZK_UID']
+  require 'dotenv'
+  Dotenv.load
+end
+
 Config = OpenStruct.new(
   :env => ActiveSupport::StringInquirer.new(ENV.fetch('APP_ENV', 'development')),
   :root => File.expand_path(File.join(File.dirname(__FILE__), '..')),

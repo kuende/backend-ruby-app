@@ -1,4 +1,4 @@
-config = DatabaseUrl.to_active_record_hash(CONFIG[:rabbitmq_url])
+config = DatabaseUrl.to_active_record_hash(Config.rabbitmq_url)
 
-Hutch::Config.set(:uri, CONFIG[:rabbitmq_url])
+Hutch::Config.set(:uri, Config.rabbitmq_url)
 Hutch::Config.set(:mq_api_host, config[:host])
