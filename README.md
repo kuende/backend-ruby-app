@@ -1,5 +1,7 @@
 #Backend Ruby Sample
 
+This project serves as the Ruby work sample for Backend Engineer position.
+
 ## Installation
 
 This application requires PostgreSQL, RabbitMQ and Redis. The easiest setup requires docker to be installed. You can get a copy by installing [Docker Toolbox](https://docs.docker.com/engine/installation/).
@@ -54,7 +56,7 @@ You are required to implemented the functionality listed below. All features nee
 
 Currently there is an API implemented which lists all notifications for an user. Please add this functionality:
 
-- Currently all notifications are returned for every request. Some users can have thousands of notifications. Implement pagination. 
+- Currently all notifications are returned for every request. Some users can have thousands of notifications. Implement pagination.
 - Get all notifications since a date sent as parameter `since`
 - Return all unread notifications (parameter `unseen=true`)
 
