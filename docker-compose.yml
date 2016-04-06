@@ -1,0 +1,16 @@
+postgres:
+  image: "postgres:9.5"
+  ports:
+    - "5432:5432"
+rabbitmq:
+  image: "kuende/rabbitmq"
+  ports:
+    - "5672:5672"
+    - "15672:15672"
+  environment:
+    RABBITMQ_USERNAME: "guest"
+    RABBITMQ_PASSWORD: "guest"
+redis:
+  image: "redis:3.0-alpine"
+  ports:
+    - "6379:6379"
