@@ -7,7 +7,7 @@ module API::Concerns::BaseSettings
 
     rescue_from :all do |e|
       e.backtrace.first(20).each{|l| logger.error(l)}
-      
+
       Rack::Response.new({
         messages: [e.try(:message)],
         errors: e.try(:errors)
@@ -17,14 +17,6 @@ module API::Concerns::BaseSettings
     helpers do
       def logger
         API::V1.logger
-      end
-
-      def current_notification
-        @current_notification ||= Notification.find(:id => params[:id], :slug => active_slug)
-      end
-
-      def require_current_notification!
-        error!({ :errors => { :notification => ['not found']}, :messages => ['Notification does not exist'] }, 404) if current_notification.nil?
       end
 
       def require_user!
